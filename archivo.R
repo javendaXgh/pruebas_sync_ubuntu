@@ -43,4 +43,5 @@ git2r::commit(repo,paste('Commit covid', Sys.time()))
 git2r::config(repo, user.name = 'javendaXgh',user.email = 'javendaXgh@gmail.com')
 
 git2r::push( credentials = cred)
-
+#git@github.com:javendaXgh/pruebas_sync_ubuntu.git
+git2r::push(credentials = git2r::cred_ssh_key())
