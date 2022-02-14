@@ -26,8 +26,8 @@ repo <- git2r::repository( "/home/jose/R/pruebas_sync_ubuntu")
 git2r::config(repo, user.name = 'javendaXgh',user.email = 'javendaXgh@gmail.com')
 #git2r::cred_ssh_key()
 cred <- git2r::cred_ssh_key(
-  publickey = "/home/jose/.ssh/id_rsa.pub",
-  privatekey = "/home/jose/.ssh/id_rsa")
+  publickey = "/home/jose/.ssh3/id_rsa.pub",
+  privatekey = "/home/jose/.ssh3/id_rsa")
 
 #cred <-  git2r::cred_ssh_key("~/.ssh/id_rsa.pub", "~/.ssh/id_rsa" )
 #cred <- cred_env('GH_USER','GH_PAT')
@@ -44,4 +44,4 @@ git2r::config(repo, user.name = 'javendaXgh',user.email = 'javendaXgh@gmail.com'
 
 git2r::push( repo,credentials = cred)
 #git@github.com:javendaXgh/pruebas_sync_ubuntu.git
-git2r::push(credentials = git2r::cred_ssh_key())
+#git2r::push(credentials = git2r::cred_ssh_key())
