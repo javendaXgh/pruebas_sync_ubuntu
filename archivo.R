@@ -33,7 +33,7 @@ cred <- git2r::cred_ssh_key(
 #cred <- cred_env('GH_USER','GH_PAT')
 
 git2r::cred_token()
-#push(repo, credentials = cred_token())#probar
+push(repo, credentials = cred_token())#probar
 
 
 
@@ -42,6 +42,6 @@ git2r::commit(repo,paste('Commit covid', Sys.time()))
 #git2r::libgit2_features()
 git2r::config(repo, user.name = 'javendaXgh',user.email = 'javendaXgh@gmail.com')
 
-git2r::push( credentials = cred)
+git2r::push( repo,credentials = cred)
 #git@github.com:javendaXgh/pruebas_sync_ubuntu.git
 git2r::push(credentials = git2r::cred_ssh_key())
